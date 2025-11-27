@@ -1,0 +1,17 @@
+S = input().strip()
+T = input().strip()
+
+if len(S) != len(T):
+    print(f"Строка S: {S}")
+    print(f"Строка T: {T}")
+    print("Результат: -1")
+else:
+    found = -1
+    for shift in range(len(S)):
+        if S == T[shift:] + T[:shift]:
+            found = shift
+            break
+    
+    print(f"Строка S: {S}")
+    print(f"Строка T: {T}")
+    print(f"Результат: {found}")
