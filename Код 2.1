@@ -1,11 +1,9 @@
-S = input().strip()
-T = input().strip()
+s = input().strip()  
+t = input().strip()  
 
 result = []
-for i in range(len(S) - len(T) + 1):
-    if S[i:i+len(T)] == T:
+for i in range(len(s) - len(t) + 1):
+    if s[i:i+len(t)] == t:
         result.append(i)
 
-print(f"Строка S: '{S}'")
-print(f"Строка T: '{T}'")
-print(f"Результат: {' '.join(map(str, result))}")
+print(' '.join(map(str, result)))  
